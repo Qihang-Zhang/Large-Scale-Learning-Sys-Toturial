@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://qihang-zhang.github.io/Large-Scale-Learning-Sys-Toturial/Tutorial/2025/03/02/sglang%20profiling.html">
       
       
+        <link rel="prev" href="../../02/27/Example.html">
       
-      <link rel="icon" href="/Large-Scale-Learning-Sys-Toturial/assets/fruit/lemon.svg">
+      
+        <link rel="next" href="../04/Sparsity%20In%20LLMs.html">
+      
+      
+      <link rel="icon" href="../../../../assets/fruit/lemon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.27">
     
     
       
-        <title>Toturial Towards Large-Scale Learning Systems</title>
+        <title>SGLang profiling - Toturial Towards Large-Scale Learning Systems</title>
       
     
     
-      <link rel="stylesheet" href="/Large-Scale-Learning-Sys-Toturial/assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="/Large-Scale-Learning-Sys-Toturial/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -67,9 +73,9 @@
       
     
     
-      <link rel="stylesheet" href="/Large-Scale-Learning-Sys-Toturial/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/Large-Scale-Learning-Sys-Toturial/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -94,6 +100,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#sglang-profiling" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -108,7 +119,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="https://qihang-zhang.github.io/" title="Toturial Towards Large-Scale Learning Systems" class="md-header__button md-logo" aria-label="Toturial Towards Large-Scale Learning Systems" data-md-component="logo">
       
-  <img src="/Large-Scale-Learning-Sys-Toturial/assets/fruit/watermelon.svg" alt="logo">
+  <img src="../../../../assets/fruit/watermelon.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -125,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              SGLang profiling
             
           </span>
         </div>
@@ -219,11 +230,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/Large-Scale-Learning-Sys-Toturial/Tutorial/index.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../index.html" class="md-tabs__link">
           
   
   Tutorial
@@ -239,7 +252,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/Large-Scale-Learning-Sys-Toturial/index.html" class="md-tabs__link">
+      <a href="../../../../index.html" class="md-tabs__link">
         
   
     
@@ -268,7 +281,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -283,7 +298,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="https://qihang-zhang.github.io/" title="Toturial Towards Large-Scale Learning Systems" class="md-nav__button md-logo" aria-label="Toturial Towards Large-Scale Learning Systems" data-md-component="logo">
       
-  <img src="/Large-Scale-Learning-Sys-Toturial/assets/fruit/watermelon.svg" alt="logo">
+  <img src="../../../../assets/fruit/watermelon.svg" alt="logo">
 
     </a>
     Toturial Towards Large-Scale Learning Systems
@@ -295,25 +310,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -324,7 +344,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Tutorial
@@ -335,12 +355,14 @@
                 
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
-      <a href="/Large-Scale-Learning-Sys-Toturial/Tutorial/index.html" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -361,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Large-Scale-Learning-Sys-Toturial/Tutorial/motivation-zh.html" class="md-nav__link">
+      <a href="../../../motivation-zh.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -382,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Large-Scale-Learning-Sys-Toturial/Tutorial/motivation-en.html" class="md-nav__link">
+      <a href="../../../motivation-en.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -408,17 +430,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
         
           
-          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -445,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Large-Scale-Learning-Sys-Toturial/Tutorial/archive/2025.html" class="md-nav__link">
+      <a href="../../../archive/2025.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -479,17 +504,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
         
           
-          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -516,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Large-Scale-Learning-Sys-Toturial/Tutorial/category/in-progress.html" class="md-nav__link">
+      <a href="../../../category/in-progress.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -539,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Large-Scale-Learning-Sys-Toturial/Tutorial/category/profiling.html" class="md-nav__link">
+      <a href="../../../category/profiling.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -562,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Large-Scale-Learning-Sys-Toturial/Tutorial/category/random-thoughts.html" class="md-nav__link">
+      <a href="../../../category/random-thoughts.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -585,7 +613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Large-Scale-Learning-Sys-Toturial/Tutorial/category/sparsity.html" class="md-nav__link">
+      <a href="../../../category/sparsity.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -621,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Large-Scale-Learning-Sys-Toturial/index.html" class="md-nav__link">
+      <a href="../../../../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -643,14 +671,144 @@
             
           
           
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-  <h1>404 - Not found</h1>
-
-              </article>
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../index.html" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
             </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/148497514?v=4" alt="Qihang">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Qihang
+                        
+                      </strong>
+                      <br>
+                      NaN
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2025-03-02 00:00:00" class="md-ellipsis">Mar 2, 2025</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3H9m3 2 4 13 3-1-4-13-3 1M5 5v13h3V5H5M3 19v2h18v-2H3Z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../category/profiling.html">Profiling</a>, 
+                              <a href="../../../category/in-progress.html">In progress</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              1 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
           
+            
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+
+
+<h1 id="sglang-profiling">SGLang profiling<a class="headerlink" href="#sglang-profiling" title="Permanent link">&para;</a></h1>
+<p>This post is about my learning experience on profiling SGLang.</p>
+<!-- more -->
+
+<p>Reference:</p>
+<ul>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/23440683394">如何配置一台爽快的开发机器</a></p>
+</li>
+<li>
+<p><a href="https://docs.sglang.ai/references/benchmark_and_profiling.html">sglang doc</a></p>
+</li>
+<li>
+<p><a href="https://github.com/sgl-project/sglang/tree/main/benchmark">sglang benchmark</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -659,6 +817,46 @@
       
         <footer class="md-footer">
   
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../02/27/Example.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Example">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Example
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04/Sparsity%20In%20LLMs.html" class="md-footer__link md-footer__link--next" aria-label="Next: Sparsity in LLMs">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Sparsity in LLMs
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -683,10 +881,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/Large-Scale-Learning-Sys-Toturial/", "features": ["katex", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.footer", "toc.integrate", "navigation.sections"], "search": "/Large-Scale-Learning-Sys-Toturial/assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["katex", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.footer", "toc.integrate", "navigation.sections"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/Large-Scale-Learning-Sys-Toturial/assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

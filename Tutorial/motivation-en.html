@@ -14,7 +14,7 @@
         <link rel="prev" href="motivation-zh.html">
       
       
-        <link rel="next" href="category/random-thoughts.html">
+        <link rel="next" href="category/in-progress.html">
       
       
       <link rel="icon" href="../assets/fruit/lemon.svg">
@@ -290,7 +290,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://qihang-zhang.github.io/" title="Toturial Towards Large-Scale Learning Systems" class="md-nav__button md-logo" aria-label="Toturial Towards Large-Scale Learning Systems" data-md-component="logo">
       
@@ -317,6 +319,8 @@
         
         
       
+      
+        
       
     
     
@@ -431,16 +435,21 @@
     
       
       
+        
+          
+          
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
         
           
-          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -500,16 +509,21 @@
     
       
       
+        
+          
+          
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
         
           
-          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -536,11 +550,80 @@
   
   
     <li class="md-nav__item">
+      <a href="category/in-progress.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    In progress
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="category/profiling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Profiling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
       <a href="category/random-thoughts.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Random Thoughts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="category/sparsity.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sparsity
   </span>
   
 
@@ -592,24 +675,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -618,7 +683,7 @@
                   
 
 
-<h1 id="motivation">Motivation</h1>
+<h1 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">&para;</a></h1>
 <p>The idea of writing a Learning Blog has been on my mind for a long time. I have always been inspired by <a href="https://lilianweng.github.io/">Lil's Log</a>, and recently, after seeing my friend’s work on <a href="https://github.com/zhaochenyang20/Awesome-ML-SYS-Tutorial?tab=readme-ov-file">Awesome-ML-SYS-Tutorial</a>, I decided to start my own blog to organize my learnings, thoughts, and reflections, while also sharing insights and sparking discussions with others.</p>
 <p>Although it has been quite some time since the emergence of GPT-3.5, it was only recently that I realized that research on Large-Scale Learning Systems has evolved into a paradigm fundamentally different from the Deep Learning era that began with AlexNet in 2012. The efforts required in this field can no longer be simply summarized by a single Scaling Law. As a System, LLMs' System Design has become a highly dynamic and rapidly evolving research area.</p>
 <p>The recent advancements from Deepseek have made this shift even more tangible for me. Whether it is DeepseekV3 leveraging <a href="https://arxiv.org/pdf/2412.19437">DeepSeekMoE</a> or the innovations in <a href="https://arxiv.org/pdf/2502.11089">NSA</a>, it is evident that LLM design is increasingly adapting to GPU-specific constraints, such as communication costs, to expand context windows or scale up model capacity within limited computational resources. These key developments strongly reflect System Design principles. At this point in time, the skill set required for research has undergone a significant transformation compared to the era of small-scale Learning Systems.</p>
@@ -672,13 +737,13 @@
         
         
           
-          <a href="category/random-thoughts.html" class="md-footer__link md-footer__link--next" aria-label="Next: Random Thoughts">
+          <a href="category/in-progress.html" class="md-footer__link md-footer__link--next" aria-label="Next: In progress">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Random Thoughts
+                In progress
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -712,7 +777,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["katex", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.footer"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["katex", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.footer", "toc.integrate", "navigation.sections"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"CSS": "css", "HTML5": "html", "JavaScript": "js"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
