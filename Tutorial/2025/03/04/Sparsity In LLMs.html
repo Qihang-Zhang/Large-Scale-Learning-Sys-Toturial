@@ -897,7 +897,7 @@ k_t = W^K h_t,
 <div class="arithmatex">\[
 v_t = W^V h_t.
 \]</div>
-<p>Then, <span class="arithmatex">\( q_t, k_t, v_t \)</span> will be sliced into <span class="arithmatex">\( n_h \)</span> heads for the multi-head attention computation:</p>
+<p>Then, <span class="arithmatex">\(q_t, k_t, v_t\)</span> will be sliced into <span class="arithmatex">\(n_h\)</span> heads for the multi-head attention computation:</p>
 <div class="arithmatex">\[
 [q_{t,1}; q_{t,2}; \dots; q_{t,n_h}] = q_t,
 \]</div>
@@ -913,7 +913,7 @@ o_{t,i} = \sum_{j=1}^{t} \text{Softmax}_j \left( \frac{q_{t,i}^T k_{j,i}}{\sqrt{
 <div class="arithmatex">\[
 u_t = W^O [o_{t,1}; o_{t,2}; \dots; o_{t,n_h}].
 \]</div>
-<p>where <span class="arithmatex">\( q_{t,i}, k_{t,i}, v_{t,i} \in \mathbb{R}^{d_h} \)</span> denote the query, key, and value of the <span class="arithmatex">\( i \)</span>-th attention head, respectively; <span class="arithmatex">\( W^O \in \mathbb{R}^{d \times d_h n_h} \)</span> denotes the output projection matrix. During inference, all keys and values need to be cached to accelerate inference, so MHA needs to cache <span class="arithmatex">\( 2 n_h d_h \)</span> elements for each token. In model deployment, this heavy KV cache is a large bottleneck that limits the maximum batch size and sequence length.</p>
+<p>where <span class="arithmatex">\(q_{t,i}, k_{t,i}, v_{t,i} \in \mathbb{R}^{d_h}\)</span> denote the query, key, and value of the <span class="arithmatex">\(i\)</span>-th attention head, respectively; <span class="arithmatex">\(W^O \in \mathbb{R}^{d \times d_h n_h}\)</span> denotes the output projection matrix. During inference, all keys and values need to be cached to accelerate inference, so MHA needs to cache <span class="arithmatex">\(2 n_h d_h\)</span> elements for each token. In model deployment, this heavy KV cache is a large bottleneck that limits the maximum batch size and sequence length.</p>
 <h4 id="low-rank-key-value-joint-compression">Low-Rank Key-Value Joint Compression<a class="headerlink" href="#low-rank-key-value-joint-compression" title="Permanent link">&para;</a></h4>
 <p>The core of MLA is the low-rank joint compression for keys and values to reduce KV cache:</p>
 <div class="arithmatex">\[
